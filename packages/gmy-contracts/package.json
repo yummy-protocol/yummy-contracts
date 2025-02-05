@@ -1,0 +1,58 @@
+{
+  "name": "gmy-contracts",
+  "files": [
+    "dist",
+    "helpers",
+    "artifacts",
+    "zolo"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "types": "dist/types/helpers/index.d.ts",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.6.0",
+    "@openzeppelin/contracts-upgradeable": "^4.6.0",
+    "@uniswap/lib": "^1.1.2",
+    "@uniswap/sdk": "^3.0.3",
+    "@uniswap/v2-core": "^1.0.1",
+    "@uniswap/v2-periphery": "^1.1.0-beta.0",
+    "@pythnetwork/pyth-sdk-solidity": "2.2.1",
+    "@openzeppelin/defender-relay-client": "^1.54.6"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^1.0.6",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.11",
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "@nomicfoundation/hardhat-verify": "^2.0.9",
+    "@types/bluebird": "^3.5.36",
+    "@types/chai": "^4.2.21",
+    "@types/mkdirp": "^1.0.2",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.7.1",
+    "bluebird": "^3.7.2",
+    "chai": "^4.3.4",
+    "chalk": "^4.1.2",
+    "dotenv": "^10.0.0",
+    "hardhat": "^2.17.4",
+    "hardhat-contract-sizer": "^2.10.0",
+    "hardhat-dependency-compiler": "^1.2.1",
+    "hardhat-deploy": "^0.12.4",
+    "jsondiffpatch": "^0.4.1",
+    "prettier": "^2.3.2",
+    "ts-node": "^10.2.1",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.3.0",
+    "typescript": "^4.3.2",
+    "ethers": "^5.0.0",
+    "bn.js": "^5.2.1",
+    "csv-parse": "^5.5.6",
+    "node-fetch": "^3.3.2"
+  },
+  "scripts": {
+    "build": "tsc --project lib.tsconfig.json && npm run cp-typechain",
+    "clean": "rm -rf artifacts/ types/ dist/ typechain/",
+    "compile": "SKIP_LOAD=true npx hardhat compile"
+  }
+}

@@ -1,0 +1,14 @@
+node_modules/
+.vscode
+typechain/
+env.json
+
+**/.DS_Store
+build
+.idea
+yarn.lock
+cache
+artifacts
+.dist/
+.env
+.turbo
